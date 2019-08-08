@@ -1,0 +1,41 @@
+<div class="col-lg-11">
+  <div class="jumbotron">
+  <h1 class="display-5">{{title}}</h1>
+
+  <div class="row">
+  <div class="col-sm-4" *ngFor="let city of cities">
+    <div class="card" >
+      <div class="card-header">
+          <h3 class="col-sm-12 text-center">{{city.name}}</h3>
+      </div>
+      <div class="card-body">
+
+        <div class="row">
+          <div class="col-sm-12">
+            <p class="card-text text-center">
+              <strong>{{city.temperature}} ºC</strong><br>
+              <small>max: {{city.maxTemperature}} ºC, min: {{city.minTemperature}} ºC</small>
+            </p>
+            <p class="card-text text-center">
+              <strong>{{city.mainWeather}}</strong><br>
+              <small>{{city.weatherDescription}}</small>
+            </p>
+          </div>
+        </div>
+
+      </div>
+      <div class="card-footer text-muted text-right">
+        <button type="button" name="button" class="btn btn-outline-success" (click)="removeCityFromFavorites($event)" id="{{city._id}}">Remove</button>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+  <br>
+  <a class="btn btn-primary btn-lg" [routerLink]="['/explore']" href="#" role="button">Explore more cities!</a>
+</div>
+</div>
