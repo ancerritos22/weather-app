@@ -16,3 +16,6 @@ The port and the database url must be configured in the api/config.js file.
 # Application
 The frontend runs in angular.
 The API address must be configured in the weatherapp/src/app/services/global.ts
+
+#Important Notes
+Currently, the app does not have validatores for the fields, so in using the app, the user should be cautious about this.
